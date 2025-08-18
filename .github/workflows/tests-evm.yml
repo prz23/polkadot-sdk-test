@@ -32,7 +32,7 @@ jobs:
       RUST_BACKTRACE: 1
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: script
         run: |
@@ -40,7 +40,7 @@ jobs:
           forklift cargo build --bin substrate-node
 
       - name: Checkout evm-tests
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: paritytech/evm-test-suite
           ref: 6ffa85740a82d9cdb90629f9e3dbca5dc175c5e9
