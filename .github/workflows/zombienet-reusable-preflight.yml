@@ -148,7 +148,7 @@ jobs:
       FLAKY_TESTS: ${{ steps.set_vars.outputs.FLAKY_TESTS }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       #
       # Set changes
@@ -162,7 +162,7 @@ jobs:
 
       - name: Set changes
         id: set_changes
-        uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c #v46.0.5
+        uses: tj-actions/changed-files@24d32ffd492484c1d75e0c0b894501ddb9d30d62 #v47.0.0
         with:
           files_yaml: |
             substrate:
@@ -254,7 +254,7 @@ jobs:
       POLKADOT_PR_ARTIFACTS_URL: ${{ steps.get_artifacts_url.outputs.POLKADOT_PR_ARTIFACTS_URL }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Wait until "Build and push images" workflow is done
         id: wait_build
         env:
